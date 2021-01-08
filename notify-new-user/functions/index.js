@@ -2,7 +2,7 @@
 https://firebase.google.com/docs/functions/organize-functions
 
 */
-const sendNewUserNotificationEmail = require("./sendNewUserNotificationEmail");
 
-exports.sendNewUserNotificationEmail =
-  sendNewUserNotificationEmail.sendNewUserNotificationEmail;
+exports.sendNewUserNotificationEmail = require("./sendNewUserNotificationEmail").sendNewUserNotificationEmail;
+
+exports.sendWelcomeMailToNewUser = require("./sendWelcomeMailToNewUser").sendWelcomeMailToNewUser;
