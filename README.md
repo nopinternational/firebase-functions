@@ -2,6 +2,24 @@
 
 `firebase emulators:start`
 
+## config
+
+to see current environment variables in Firebase
+`firebase functions:config:get`
+
+to set an env var in Firebase
+`firebase functions:config:set someservice.key="THE API KEY" someservice.id="THE CLIENT ID"`
+
+more specifically for this project
+
+```
+firebase functions:config:set sendgrid.apikey="sendgrid-api-key"
+firebase functions:config:set gmail.email="sender-account@gmail.com"
+firebase functions:config:set gmail.password="account-password"
+```
+
+Please refer to official [Firebase documentation](https://firebase.google.com/docs/functions/config-env)
+
 # Firebase SDK for Cloud Functions Quickstart - Auth triggers
 
 This quickstart demonstrates how to setup an Auth triggered Cloud Function using the **Firebase SDK for Cloud Functions**.
