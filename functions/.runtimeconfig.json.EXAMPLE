@@ -1,0 +1,9 @@
+{
+  "gmail": {
+    "password": "password",
+    "email": "sending-account@gmail.com"
+  },
+  "sendgrid": {
+    "apikey": "sendgrid-api-key"
+}
+}

@@ -8,11 +8,7 @@ sgMail.setApiKey(SENDGRID_API_KEY);
 exports.sendWelcomeMailToNewUser = functions.database
   .ref("users/{userid}")
   .onCreate(async (change, context) => {
-    console.log("============ DEBUG ============");
-    console.log("change: ", change);
-    console.log("context: ", context);
-    console.log("============ DEBUG ============");
-    const emailTo = "sthlmpar08@gmail.com"; // change to email from change obj
+    const emailTo = change._data.email;
     sendSendgridEmail(emailTo);
     console.log("New welcome email sent to:", emailTo);
     return null;
@@ -30,7 +26,6 @@ const sendSendgridEmail = (mailTo) => {
     text: "Night of Passion - Välkommen",
     html: "<strong>Night of Passion - Välkommen</strong>",
   };
-  console.log(mailMsg);
 
   sgMail.send(mailMsg).then(
     () => {},
