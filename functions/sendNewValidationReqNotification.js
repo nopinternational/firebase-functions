@@ -21,8 +21,8 @@ const mailTransport = nodemailer.createTransport({
 exports.sendNewValidationReqNotification = functions.database
   .ref("/validation/{userId}/status/{status}")
   .onWrite((snapshot, context) => {
-    console.log("snapshot", snapshot);
-    console.log("context", context);
+    //console.log("snapshot", snapshot);
+    //console.log("context", context);
     const status = snapshot.after._data;
     const userId = context.params.userId; // The display name of the user.
 
@@ -30,8 +30,8 @@ exports.sendNewValidationReqNotification = functions.database
     const data = { status, userId };
     const email = gmailEmail;
 
-    console.log("data:", data);
-    console.log("status:", status);
+    //console.log("data:", data);
+    //console.log("status:", status);
     return status == "PENDING" && sendNewUserNotificationEmail(email, data);
   });
 
