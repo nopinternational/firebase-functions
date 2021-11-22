@@ -11,5 +11,9 @@ exports.sendWelcomeMailToNewUser =
 
 exports.sendNewAuthUserNotification =
   require("./sendNewAuthUserNotification").sendNewAuthUserNotification;
+
 exports.sendNewValidationReqNotification =
   require("./sendNewValidationReqNotification").sendNewValidationReqNotification;
+
+exports.verificationNotification =
+  require("./verificationNotification").verificationNotification;

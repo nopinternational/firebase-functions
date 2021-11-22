@@ -32,7 +32,7 @@ exports.sendNewValidationReqNotification = functions.database
 
     //console.log("data:", data);
     //console.log("status:", status);
-    return status == "PENDING" && sendNewUserNotificationEmail(email, data);
+    //return status == "PENDING" && sendNewUserNotificationEmail(email, data);
   });
 
 // Sends a notification email to the given user.
