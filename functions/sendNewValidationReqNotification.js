@@ -32,7 +32,7 @@ exports.sendNewValidationReqNotification = functions.database
 
     //console.log("data:", data);
     //console.log("status:", status);
-    //return status == "PENDING" && sendNewUserNotificationEmail(email, data);
+    return status == "PENDING" && sendNewUserNotificationEmail(email, data);
   });
 
 // Sends a notification email to the given user.
@@ -50,6 +50,7 @@ async function sendNewUserNotificationEmail(email, data) {
   // The user subscribed to the newsletter.
   mailOptions.subject = `New NoP signup`;
   mailOptions.text = text;
+  console.log("send validation req mail ", mailOptions);
   await mailTransport.sendMail(mailOptions);
   return null;
 }
