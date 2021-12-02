@@ -22,9 +22,9 @@ exports.verificationNotification = functions.database
       const emailRef = snapshot.after.ref.parent.parent
         .child("current")
         .child("email");
-      //console.log("emailRef: ", emailRef);
+
       //const emailRef = functions.database.ref(`/validation/${userId}/current/`);
-      emailRef.get("email").then((snapshot) => {
+      emailRef.once("value").then((snapshot) => {
         //console.log("snapshot from emailRef: ", snapshot);
         if (snapshot.exists()) {
           const emailTo = snapshot.val();
