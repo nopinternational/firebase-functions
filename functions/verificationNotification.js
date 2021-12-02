@@ -14,7 +14,8 @@ exports.verificationNotification = functions.database
     // console.log("onWrite context.auth: ", context.auth);
 
     const statusValue = snapshot.after._data;
-    const sendEmail = statusValue != null && statusValue != "PENDING";
+    const sendEmail =
+      statusValue != null && statusValue != "PENDING" && statusValue != "RETRY";
 
     if (sendEmail) {
       const userId = context.params.userId;
