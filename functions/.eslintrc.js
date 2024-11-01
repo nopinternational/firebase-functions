@@ -31,5 +31,6 @@ module.exports = {
     "import/no-unresolved": 0,
     "indent": ["error", 2],
     "max-len": ["error", { "code": 120 }],
+    "valid-jsdoc:": false
   },
 };
