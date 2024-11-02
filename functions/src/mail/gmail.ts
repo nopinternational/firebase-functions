@@ -1,5 +1,5 @@
-import nodemailer from "nodemailer";
-
+//import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
 type GmailConfig = {
     email: string,
     password: string,
