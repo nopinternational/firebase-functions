@@ -1,5 +1,5 @@
 import { onValueCreated } from "firebase-functions/database";
-import { GmailConfig, sendEmail } from "../gmail";
+import { GmailConfig, sendEmail } from "../mail/gmail";
 import { defineSecret } from "firebase-functions/params";
 
 // Define the secret parameter

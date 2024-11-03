@@ -4,12 +4,12 @@
     "./functions",
     { "mode": "auto" }
 ],
-"editor.formatOnSave": true,
+"editor.formatOnSave": false,
 "eslint.format.enable": true,
 "eslint.codeActionsOnSave.rules": null,
 
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
+        "source.fixAll.eslint": "explicit"
     },
     "eslint.validate": [
         "javascript"

@@ -1,15 +1,15 @@
 import { createTransport } from "nodemailer";
 
 export type GmailConfig = {
-  email: string,
-  password: string,
+    email: string,
+    password: string,
 }
 
 type MailOptions = {
-  subject?: string;
-  text?: string;
-  from: string
-  to: string
+    subject?: string;
+    text?: string;
+    from: string
+    to: string
 }
 
 const sendEmail = (gmailConfig: GmailConfig, email: string, subject: string, mailContent: string): void => {
