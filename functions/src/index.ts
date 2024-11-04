@@ -1,5 +1,8 @@
 import { initializeApp } from "firebase-admin/app";
+import { sendNewUserNotificationEmail } from "./admin-functions/newUser";
+import { sendNewEvenParticipantNotification } from "./admin-functions/newEventParticipant";
+
 initializeApp();
 
-import { sendNewUserNotificationEmail } from "./admin-functions/newUser";
-export const foo = sendNewUserNotificationEmail;
+
+export default { sendNewEvenParticipantNotification, sendNewUserNotificationEmail };
