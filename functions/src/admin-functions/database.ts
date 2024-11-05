@@ -7,7 +7,7 @@ const firestore = getFirestore();
 export const userLookup = async (userId: string): Promise<string> => {
   const docRef = firestore.collection("profiles").doc(userId);
   const userDoc = await docRef.get();
-  console.log("eventDoc", userDoc);
+  // console.log("userDoc", userDoc);
   console.log("----------------");
   const user = userDoc.data();
   console.log("user", user);
@@ -20,7 +20,7 @@ export const userLookup = async (userId: string): Promise<string> => {
 export const eventLookup = async (eventId: string): Promise<string> => {
   const docRef = firestore.collection("events").doc(eventId);
   const eventDoc = await docRef.get();
-  console.log("eventDoc", eventDoc);
+  // console.log("eventDoc", eventDoc);
   console.log("----------------");
   const event = eventDoc.data();
   console.log("event", event);

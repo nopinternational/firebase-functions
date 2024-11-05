@@ -11,7 +11,8 @@ const gEmail = defineSecret("GMAIL_EMAIL");
 const gPass = defineSecret("GMAIL_PASSWORD");
 
 
-export const sendNewEvenParticipantNotification = onDocumentCreated("events/{eventId}/participants/{uid}", (event) => {
+export const sendNewEvenParticipantNotification =
+onDocumentCreated({ document: "events/{eventId}/participants/{uid}", secrets: [gEmail, gPass] }, (event) => {
   onNewParticipant(event.params.eventId, event.params.uid, event.data?.data());
 });
 
