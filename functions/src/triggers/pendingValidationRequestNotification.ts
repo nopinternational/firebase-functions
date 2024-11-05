@@ -23,7 +23,7 @@ export const sendPendingValidationRequest =
     console.log("userdata: ", userdata);
 
     if (userdata.status == "PENDING") {
-      onPendingValidationRequest(userId, userdata);
+      onPendingValidationRequest(userId);
     } else {
       console.log("status ignored:", userdata.status);
     }
