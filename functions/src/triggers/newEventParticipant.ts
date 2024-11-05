@@ -2,9 +2,9 @@
 import {
   onDocumentCreated,
 } from "firebase-functions/v2/firestore";
-import { GmailConfig, sendEmail } from "../mail/gmail";
+import { GmailConfig, sendEmail } from "../lib/mail/gmail";
 import { defineSecret } from "firebase-functions/params";
-import { eventLookup, userLookup } from "./database";
+import { eventLookup, userLookup } from "../lib/database";
 
 // Define the secret parameter
 const gEmail = defineSecret("GMAIL_EMAIL");

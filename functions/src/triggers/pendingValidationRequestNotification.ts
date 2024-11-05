@@ -1,7 +1,7 @@
 import { onValueWritten } from "firebase-functions/database";
-import { GmailConfig, sendEmail } from "../mail/gmail";
+import { GmailConfig, sendEmail } from "../lib/mail/gmail";
 import { defineSecret } from "firebase-functions/params";
-import { userLookup } from "./database";
+import { userLookup } from "../lib/database";
 
 // Define the secret parameter
 const gEmail = defineSecret("GMAIL_EMAIL");
@@ -56,19 +56,3 @@ const onNewUserEmailTemplate = (data: EmailTemplateData): string => {
   return text;
 };
 
-// exports.sendNewValidationReqNotification = functions.database
-//   .ref("/validation/{userId}/status/{status}")
-//   .onWrite((snapshot, context) => {
-//     // console.log("snapshot", snapshot);
-//     // console.log("context", context);
-//     const status = snapshot.after._data;
-//     const userId = context.params.userId; // The display name of the user.
-
-//     // const userid = context.params.userid;
-//     const data = { status, userId };
-//     const email = gmailEmail;
-
-//     // console.log("data:", data);
-//     // console.log("status:", status);
-//     return status == "PENDING" && sendNewUserNotificationEmail(email, data);
-//   });
