@@ -8,7 +8,7 @@ export const init = (sendgridApiKey: string) => {
 
 export const sendSgMail = (mailMsg: MailDataRequired) => {
   sgMail.send(mailMsg).then(
-    () => { },
+    () => {/* no-op*/},
     (error) => {
       console.error(error);
 
