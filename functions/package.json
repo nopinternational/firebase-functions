@@ -4,7 +4,7 @@
     "lint": "eslint --ext .js,.ts .",
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "serve": "npm run build && firebase emulators:start --only functions,database,firestore --import ./.data --export-on-exit ./.data",
+    "serve": "npm run build && firebase emulators:start --only functions,database,firestore,auth --import ./.data --export-on-exit ./.data",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
@@ -15,6 +15,7 @@
   },
   "main": "lib/index.js",
   "dependencies": {
+    "@sendgrid/mail": "^8.1.4",
     "firebase-admin": "^12.6.0",
     "firebase-functions": "^6.0.1",
     "nodemailer": "^6.9.16"
