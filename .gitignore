@@ -86,3 +86,7 @@ node_modules/
 auth_export/
 database_export
 firebase-export-metadata.json
+
+.DS_Store
+
+

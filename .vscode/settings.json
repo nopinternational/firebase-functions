@@ -1,0 +1,18 @@
+{
+  "eslint.workingDirectories": [
+
+    "./functions",
+    { "mode": "auto" }
+],
+"editor.formatOnSave": false,
+"eslint.format.enable": true,
+"eslint.codeActionsOnSave.rules": null,
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": [
+        "javascript"
+    ],
+    "editor.tabSize": 2
+}
