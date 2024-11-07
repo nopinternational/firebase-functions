@@ -19,6 +19,22 @@ deploy functions NB! Deploys to the project selected by `firbase use`
 
 ## config
 
+### Env variable
+In `.secret.local.EXAMPLE` you can find all env variables you need to set
+They only work with emulators
+
+To set them in production-line environments (Firebase online), please visit Security manager in Google cloud console. 
+
+### Setup app password for gmail integration
+
+https://myaccount.google.com/apppasswords
+
+### Sendgrid api
+ 
+Please refer to Sendgrid how to generate and enable 
+
+### gen v1 config
+
 to see current environment variables in Firebase
 `firebase functions:config:get`
 
