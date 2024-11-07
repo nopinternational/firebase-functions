@@ -1,3 +1,18 @@
+## useful commands
+
+start local emulators
+`npm run serve`
+
+list all firebase project 
+`firebase projects:list`
+
+select firebase project
+`firebase use <project id>`
+
+deploy functions NB! Deploys to the project selected by `firbase use`
+`firebase deploy --only functions`
+
+
 ## test
 
 `firebase emulators:start`
