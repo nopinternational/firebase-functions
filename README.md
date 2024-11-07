@@ -1,15 +1,19 @@
 ## useful commands
 
-start local emulators
+start local emulators:
+
 `npm run serve`
 
-list all firebase project 
+list all firebase project: 
+
 `firebase projects:list`
 
-select firebase project
+select firebase project:
+
 `firebase use <project id>`
 
-deploy functions NB! Deploys to the project selected by `firbase use`
+deploy functions NB! Deploys to the project selected by `firbase use`:
+
 `firebase deploy --only functions`
 
 
@@ -50,6 +54,8 @@ firebase functions:config:set gmail.password="account-password"
 ```
 
 Please refer to official [Firebase documentation](https://firebase.google.com/docs/functions/config-env)
+
+---
 
 # Firebase SDK for Cloud Functions Quickstart - Auth triggers
 
