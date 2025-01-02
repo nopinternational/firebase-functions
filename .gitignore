@@ -89,4 +89,4 @@ firebase-export-metadata.json
 
 .DS_Store
 
-
+temp/*
