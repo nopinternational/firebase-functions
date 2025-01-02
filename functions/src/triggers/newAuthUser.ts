@@ -4,7 +4,7 @@ import { init, updateSgContact } from "../lib/mail/sendgrid";
 
 
 // Should be a secret but genv1 cannot handle secrets, need to be included into dependency array
-const sendgridAPIKey = defineString("SENDGRID_APIKEY");
+const sendgridAPIKey = defineString("SENDGRID_CONTACTS_APIKEY");
 const sendgridNopListId = defineString("SENDGRID_NOP_LISTID");
 
 
